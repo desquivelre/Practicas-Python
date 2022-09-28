@@ -1,9 +1,9 @@
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 6.5 Write code using find() and string slicing (see section 6.10) to extract the number at the end of the line below. Convert the extracted value to a floating point number and print it out.
 
 # Desired Output 
 # 0.8475
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # OPCION 1
 
@@ -23,9 +23,9 @@
 
 # print(num)
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # write any code you like in the window below. There are three files loaded and ready for you to open if you want to do file processing: "texto.txt".
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # file_open = open("texto.txt", "r")
 
@@ -36,10 +36,10 @@
 #     count += 1
 # print("\nEl texto tiene " + str(count) + " líneas")
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 7.1 Write a program that prompts for a file name, then opens that file and reads through the file, and print the contents of the file in upper case. Use the file words.txt to produce the output below.
 # You can download the sample data at http://www.py4e.com/code3/words.txt
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = input("Enter file name: ")
 # fh = open(fname)
@@ -47,7 +47,7 @@
 # for line in fh:
 #     print(line.upper().strip())
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 7.2 Write a program that prompts for a file name, then opens that file and reads through the file, looking for lines of the form:
 # X-DSPAM-Confidence:    0.8475
 # Count these lines and extract the floating point values from each of the lines and compute the average of those values and produce an output as shown below. Do not use the sum() function or a variable named sum in your solution.
@@ -57,7 +57,7 @@
 
 # Desired Output
 # Average spam confidence: 0.7507185185185187
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = input("Enter file name: ")
 # fh = open(fname)
@@ -74,13 +74,13 @@
 # prom = num / count
 # print("Average spam confidence: " + str(prom))
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 8.4 Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in python sort() order as shown in the desired output.
 # You can download the sample data at http://www.py4e.com/code3/romeo.txt
 
 # Desired Output
 # ['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east', 'envious', 'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick', 'soft', 'sun', 'the', 'through', 'what', 'window', 'with', 'yonder']
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = open("romeo.txt")
 # list_text = list()
@@ -96,7 +96,7 @@
 # list_text.sort()
 # print(list_text)
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 8.5 Open the file mbox-short.txt and read it line by line. When you find a line that starts with 'From ' like the following line:
 # From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 # You will parse the From line using split() and print out the second word in the line (i.e. the entire address of the person who sent the message). Then print out a count at the end.
@@ -133,7 +133,7 @@
 # cwen@iupui.edu
 # cwen@iupui.edu
 # There were 27 lines in the file with From as the first word
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = open("mbox-short.txt")
 
@@ -149,12 +149,12 @@
 
 # print("There were " + str(contador) + " lines in the file with From as the first word")
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 9.4 Write a program to read through the mbox-short.txt and figure out who has sent the greatest number of mail messages. The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail. The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.
 
 # Desired Output
 # cwen@iupui.edu 5
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = open("mbox-short.txt")
 
@@ -180,7 +180,7 @@
 
 # print(str(correo) + " " + str(result))
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # 10.2 Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
 # From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 # Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
@@ -198,7 +198,7 @@
 # 17 2
 # 18 1
 # 19 1
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # fname = open("mbox-short.txt")
 
@@ -216,10 +216,10 @@
 # for key, value in lst_sorteded:
 #     print(key, value)
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Library re
 # Sirve para que a través del texto puede realizar ciertas funciones
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # import re
 
@@ -235,9 +235,9 @@
 
 # print(sum)
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
-# ------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 # import socket
 
@@ -254,19 +254,8 @@
 
 # mysock.close()
 
-import socket
+#--------------------------------------------------------------------------------------------------------------
 
-HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
-PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind((HOST, PORT))
-    s.listen()
-    conn, addr = s.accept()
-    with conn:
-        print(f"Connected by {addr}")
-        while True:
-            data = conn.recv(1024)
-            if not data:
-                break
-            conn.sendall(data)
+#--------------------------------------------------------------------------------------------------------------
+
